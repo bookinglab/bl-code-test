@@ -44,3 +44,6 @@ The images are displaying at the wrong size on the details page. Please correct 
 ### HINTS
 - Read the comments in the code to get a deeper understanding of how the app works and how each file is related
 - Start at the photos-view.component.ts file and see how it uses other files to load data.
+- If you need to log into Unsplash, use the following credentials:
+- - email: dev@bookinglab.co.uk
+- - password: Contact bookinglab team
