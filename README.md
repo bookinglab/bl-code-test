@@ -40,3 +40,8 @@ The images are not loading. Please correct this.
 
 ### Bug 2
 The images are displaying at the wrong size on the details page. Please correct this.
+
+### HINTS
+- Use the console. You can press `F12` to open Developer Tools in most browsers. The Console and Network tabs will be the most useful
+- Read the comments in the code to get a deeper understanding of how the app works and how each file is related
+- Start at the photos-view.component.ts file and see how it uses other files to load data.
