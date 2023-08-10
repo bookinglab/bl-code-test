@@ -21,11 +21,9 @@ export class TokenInterceptor implements HttpInterceptor {
 
     const httpOptions = {
       headers: new HttpHeaders({
-      //  'Authorization': `Client-ID ${environment.unsplashAccessKey}`,
        'Content-Type': 'application/json'
       }),
       params: new HttpParams({ fromString: `client_id=${environment.unsplashAccessKey}` })
-      // withCredentials: true
      };
 
     const modifiedReq = request.clone(httpOptions);
