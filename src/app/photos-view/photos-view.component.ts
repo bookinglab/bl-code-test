@@ -19,7 +19,7 @@ import { Photo } from '../types/photo';
 })
 export class PhotosViewComponent implements OnInit {
 
-  // The list of photos to dispplay
+  // The list of photos to display
   photos:Photo[] = [];
 
   loadingMessage:string = 'Loading...';
