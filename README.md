@@ -2,26 +2,41 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.2.
 
+## Installation
+
+Please run `npm install` to download all dependencies.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Structure
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+All code for the app resides under the `src/app` directory. The below file paths are relative to this location.
 
-## Build
+This app connects to the [Unsplash API](https://unsplash.com/documentation) and pulls down a selection of photos. The user can then click on an image to see more details.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+The app flows as such:
+- `environments/environment.ts`: This file contains essentail configuration such as the application URL and the access and secret keys for the Unsplash API
+- `services/unsplash-service.service.ts`: This file contains the network calls to communicate with the Unsplash API. It also creates the "Photo" object that is used throughout the rest of the app
+- `types/photo.ts`: Creates the definition of what a "photo" is within this app. This includes all properties that a photo must have
+- `photos-view/photos-view.component.ts`: This is the first page. This file calls the Unsplash service to load the images
+- `photos-view/photos-view.component.html`: This file displays the layout of the images from Unsplash. It also adds a "click" handler that loads the selected image into the Data Store and redirects to the next page
+- `services/data-store.service.ts`: This file acts as a backing store for the application that contains all changes to the app made by the user (mimicing a traditional database). In this example, it stores the selected image
+- `detail-view/detail-view.component.ts`: This file contains the logic for displaying a larger version of the selected image by getting it from the data store
+- `detail-view/detail-view.component.html`: This file contains the markup for displaying the larger image and some associated metadata
 
-## Running unit tests
+### Diagram
+![Flow chart of app](https://bookinglabimagerepo.s3.eu-west-1.amazonaws.com/codetest/codetest.drawio.png)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## The problem
+There are 2 bugs in this application. Please find them and correct them, documenting:
+- Your process for finding the bug
+- Your process for fixing the bug
+- Your process for testing the fix
 
-## Running end-to-end tests
+### Bug 1
+The images are not loading. Please correct this.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Bug 2
+The images are displaying at the wrong size on the details page. Please correct this.

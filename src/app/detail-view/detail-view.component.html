@@ -1,0 +1,19 @@
+<div class="px-4 pt-5 my-5 text-center border-bottom" [ngStyle]="{'background-color': selectedPhoto?.color }">
+    <h1>{{ selectedPhoto?.description }}</h1>
+    <div class="col-lg-6 mx-auto">
+        <div>Likes: {{ selectedPhoto?.likes }}</div>
+        <div>Author: {{ selectedPhoto?.user }}</div>
+    </div>
+    <div class="overflow-hidden">
+        <div class="container px-5">
+            <img src="{{ selectedPhoto?.fullImage }}" alt="{{ selectedPhoto?.altDescription }}" class="img-fluid border rounded-3 shadow-lg mb-4" />
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <p>
+            <button class="btn btn-primary btn-lg" (click)="back()">Back to photos</button>
+        </p>
+    </div>
+</div>

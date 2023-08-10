@@ -1,0 +1,22 @@
+<div class="row mb-1">
+    <div class="col">
+        <h1>bookinglab image browser</h1>
+        <p class="lead">Please select an image to see more details</p>
+    </div>
+</div>
+<ng-container *ngIf="photos.length > 0">
+    <div class="row mb-1">
+        <div class="col photo-wrap" *ngFor="let photo of photos" (click)="selectPhoto(photo)">
+            <img class="img-fluid" src="{{ photo.thumbnail }}" alt="{{ photo.altDescription }}" />
+            <p class="text-center">{{ photo.description }}</p>
+        </div>
+    </div> 
+</ng-container>
+<ng-container *ngIf="photos.length < 1">
+    <div class="row mb-1">
+        <div class="col">
+            <p>{{loadingMessage}}</p>
+        </div>
+    </div>
+    
+</ng-container>
