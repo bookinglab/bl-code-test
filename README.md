@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Installation
 
-Please run `npm install` to download all dependencies.
+Please run `npm install` inside the directory where you downloaded the code to download all dependencies.
 
 ## Development server
 
@@ -17,12 +17,12 @@ All code for the app resides under the `src/app` directory. The below file paths
 This app connects to the [Unsplash API](https://unsplash.com/documentation) and pulls down a selection of photos. The user can then click on an image to see more details.
 
 The app flows as such:
-- `environments/environment.ts`: This file contains essentail configuration such as the application URL and the access and secret keys for the Unsplash API
+- `environments/environment.ts`: This file contains essential configuration such as the application URL and the access and secret keys for the Unsplash API
 - `services/unsplash-service.service.ts`: This file contains the network calls to communicate with the Unsplash API. It also creates the "Photo" object that is used throughout the rest of the app
 - `types/photo.ts`: Creates the definition of what a "photo" is within this app. This includes all properties that a photo must have
 - `photos-view/photos-view.component.ts`: This is the first page. This file calls the Unsplash service to load the images
 - `photos-view/photos-view.component.html`: This file displays the layout of the images from Unsplash. It also adds a "click" handler that loads the selected image into the Data Store and redirects to the next page
-- `services/data-store.service.ts`: This file acts as a backing store for the application that contains all changes to the app made by the user (mimicing a traditional database). In this example, it stores the selected image
+- `services/data-store.service.ts`: This file acts as a backing store for the application that contains all changes to the app made by the user (mimicking a traditional database). In this example, it stores the selected image
 - `detail-view/detail-view.component.ts`: This file contains the logic for displaying a larger version of the selected image by getting it from the data store
 - `detail-view/detail-view.component.html`: This file contains the markup for displaying the larger image and some associated metadata
 
@@ -46,4 +46,3 @@ The images are displaying at the wrong size on the details page. Please correct 
 - Start at the photos-view.component.ts file and see how it uses other files to load data.
 - If you need to log into Unsplash, use the following credentials:
 - - email: dev@bookinglab.co.uk
-- - password: Contact bookinglab team

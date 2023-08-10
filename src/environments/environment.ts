@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   unsplashAccessKey: "hNHGRGGN7Pvme9KlJb-TntXeUC0R87CmAzj7tcRgzvs",
   unsplashSecretKey: "eM4lfl9NZT5NYKxvhngPO8eM-F3FemebDunaF4RTx4Y",
-  unsplashUrl: "https://api.unsplash.co/"
+  unsplashUrl: "https://api.unsplash.co/" // The Unsplash API - found here: https://unsplash.com/documentation#schema
 };
 
 /*
